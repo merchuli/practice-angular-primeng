@@ -2,8 +2,19 @@
   <h3 class="first">Basic</h3>
   <p-autoComplete [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>
 
+  <hr>
+
   <h3>Dropdown</h3>
   <p-autoComplete [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)"
   [dropdown]="true"></p-autoComplete>
+
+  <hr>
+
+  <h3>Multiple selection</h3>
+  <p-autoComplete [(ngModel)]="texts" [suggestions]="results" (completeMethod)="search($event)" [multiple]="true"></p-autoComplete>
+
+  <hr>
+
+  
 
 </div>

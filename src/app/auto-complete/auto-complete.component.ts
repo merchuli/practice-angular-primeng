@@ -12,6 +12,7 @@ export class AutoCompleteComponent implements OnInit {
   constructor() { }
 
   text: string;
+  texts: string[];
   results: string[];
 
   ngOnInit() {
