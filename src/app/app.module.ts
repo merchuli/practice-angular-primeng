@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 
 // PrimeNg
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,11 @@ import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

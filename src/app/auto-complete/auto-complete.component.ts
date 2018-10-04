@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { DropdownModule } from 'primeng/dropdown';
 
 @Component({
   selector: 'app-auto-complete',
