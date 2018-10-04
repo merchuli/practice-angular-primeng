@@ -2,28 +2,57 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+
+
 ## Pre-setiing when using PrimeNg - AutoComplete
-1. Download PrimeNg
-   npm install primeng --save
-   npm install primeicons --save
+###Download PrimeNg
 
-2. PrimgNg Style
-   Add Below into .angular-cli.json
-   "styles": [
-        "../node_modules/primeicons/primeicons.css",
-        "../node_modules/primeng/resources/themes/nova-light/theme.css",
-        "../node_modules/primeng/resources/primeng.min.css"
-    ],
+`npm install primeng —save`
+`npm install primeicons —save`
 
-3. Add required module to app.module.ts
-   // you need to add angular forms first
-   - import { FormsModule }    from '@angular/forms';
 
-   // animation
-   - import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-   // whatever module you need
-   import { AutoCompleteModule } from 'primeng/autocomplete';
+###PrimgNg Style
+
+Add Below into `.angular-cli.json`
+
+```json
+"styles": [
+
+     "../node_modules/primeicons/primeicons.css",
+
+     "../node_modules/primeng/resources/themes/nova-light/theme.css",
+
+     "../node_modules/primeng/resources/primeng.min.css"
+
+ ]
+```
+
+
+
+###Add required module to app.module.ts
+
+1. you need to add angular forms first
+
+- `import { FormsModule }    from '@angular/forms'`
+
+2.  animation
+
+- `import { BrowserAnimationsModule } from '@angular/platform-browser/animations'`
+
+3. whatever module you need
+
+- `import { AutoCompleteModule } from 'primeng/autocomplete'`
+
+
+
+## Json server
+
+###Install Json Server
+
+`npm install -g json-server`
+Refer to https://oomusou.io/json-server/intro/
+
 
 
 ## Development server
