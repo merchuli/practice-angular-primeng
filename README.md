@@ -2,6 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+## Pre-setiing when using PrimeNg - AutoComplete
+1. Download PrimeNg
+   npm install primeng --save
+   npm install primeicons --save
+
+2. PrimgNg Style
+   Add Below into index.html
+   <link rel="stylesheet" type="text/css" href="/node_modules/primeicons/primeicons.css" />
+   <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
+   <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+
+3. Add required module to app.module.ts
+   // you need to add angular forms first
+   - import { FormsModule }    from '@angular/forms';
+
+   // animation
+   - import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+   // whatever module you need
+   import { AutoCompleteModule } from 'primeng/autocomplete';
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
