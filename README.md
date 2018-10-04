@@ -8,10 +8,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
    npm install primeicons --save
 
 2. PrimgNg Style
-   Add Below into index.html
-   <link rel="stylesheet" type="text/css" href="/node_modules/primeicons/primeicons.css" />
-   <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
-   <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+   Add Below into .angular-cli.json
+   "styles": [
+        "../node_modules/primeicons/primeicons.css",
+        "../node_modules/primeng/resources/themes/nova-light/theme.css",
+        "../node_modules/primeng/resources/primeng.min.css"
+    ],
 
 3. Add required module to app.module.ts
    // you need to add angular forms first
