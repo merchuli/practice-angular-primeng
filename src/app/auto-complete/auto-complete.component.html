@@ -15,6 +15,57 @@
 
   <hr>
 
-  <h3>Objects</h3>
+  <h3>Single Object</h3>
   <p-autoComplete [(ngModel)]="val" [suggestions]="countrys" (completeMethod)="searchCountrys($event)" field="name"></p-autoComplete>
+
+  <hr>
+
+  <h3>Multiple Objects</h3>
+  <p-autoComplete [(ngModel)]="vals" [suggestions]="countrys" (completeMethod)="searchCountrys($event)" field="name" [multiple]="true"></p-autoComplete>
+  <br>
+  What you selected: {{vals|json}}
+
+  <hr>
+
+  <h3>Single Templated Object</h3>
+  <p-autoComplete [(ngModel)]="val" [suggestions]="countrys" (completeMethod)="searchCountrys($event)">
+    <ng-template let-country pTemplate="item">
+        {{country|countryInfo}}
+    </ng-template>
+  </p-autoComplete>
+  <br>
+  What you selected(json): {{val|json}}
+  <br>
+  The dropdown options can work with pipe, but the selected item cann't.
+
+  <hr>
+
+  <h3>Multiple Templated Objects</h3>
+  <p-autoComplete [(ngModel)]="vals" [suggestions]="countrys" (completeMethod)="searchCountrys($event)" [multiple]="true">
+    <ng-template let-country pTemplate="selectedItem">
+        {{country|countryInfo}}
+    </ng-template>
+  </p-autoComplete>
+  <br>
+  What you selected(json): {{vals|json}}
+  <br>
+  The dropdown options can not work with pipe, but the selected item can.
+
+  <hr>
+
+  <h3>Multiple Templated Objects(suggestions with pipe)</h3>
+  <p-autoComplete [(ngModel)]="vals" [suggestions]="countrys" (completeMethod)="searchCountriesWithPipe($event)" [multiple]="true">
+    <ng-template let-value pTemplate="selectedItem">
+        <div class="ui-helper-clearfix">
+          <div style="float:right;margin-right:20px">{{value}}</div>
+        </div>
+    </ng-template>
+  </p-autoComplete>
+  <br>
+  What you selected(json): {{vals|json}}
+  <br>
+  The dropdown options is pre-transformed with pipe, and the selected items should fix some style.
+
+  <hr>
+
 </div>

@@ -3,6 +3,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { DropdownModule } from 'primeng/dropdown';
 import { Country } from '../interfaces/country';
 import { CountryService } from '../service/country.service';
+import { CountryInfoPipe } from '../pipes/country-info.pipe';
 
 @Component({
   selector: 'app-auto-complete',
@@ -19,6 +20,7 @@ export class AutoCompleteComponent implements OnInit {
 
   /** For Objects */
   val: Country;
+  vals: Country[];
   countrys: Country[];
 
   ngOnInit() {
@@ -31,6 +33,14 @@ export class AutoCompleteComponent implements OnInit {
   searchCountrys(event) {
     this.countryService.getCountries(event.query).subscribe((res) => {
       this.countrys = res.data;
+    });
+  }
+
+  searchCountriesWithPipe(event) {
+    this.countryService.getCountries(event.query).subscribe((res) => {
+      this.countrys = res.data.map((country) => {
+        return new CountryInfoPipe().transform(country);
+      });
     });
   }
 }
