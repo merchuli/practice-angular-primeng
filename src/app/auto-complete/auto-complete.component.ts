@@ -39,7 +39,8 @@ export class AutoCompleteComponent implements OnInit {
   searchCountriesWithPipe(event) {
     this.countryService.getCountries(event.query).subscribe((res) => {
       this.countrys = res.data.map((country) => {
-        return new CountryInfoPipe().transform(country);
+        country.displayData = new CountryInfoPipe().transform(country);
+        return country;
       });
     });
   }
