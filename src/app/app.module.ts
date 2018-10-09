@@ -15,11 +15,13 @@ import { DropdownModule } from 'primeng/dropdown';
 
 // Service
 import { CountryService } from './service/country.service';
+import { CountryInfoPipe } from './pipes/country-info.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutoCompleteComponent
+    AutoCompleteComponent,
+    CountryInfoPipe
   ],
   imports: [
     BrowserModule,
