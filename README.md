@@ -51,7 +51,15 @@ Add Below into `.angular-cli.json`
 ###Install Json Server
 
 `npm install -g json-server`
-Refer to https://oomusou.io/json-server/intro/
+
+1. cd MY_PROJECT
+2. mkdir json-server
+3. cd json-server
+4. json-server --watch db.json
+
+Refer to https://oomusou.io/json-server/intro/ and https://github.com/typicode/json-server
+
+
 
 
 
