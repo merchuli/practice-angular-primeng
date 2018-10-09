@@ -15,6 +15,6 @@
 
   <hr>
 
-  
-
+  <h3>Objects</h3>
+  <p-autoComplete [(ngModel)]="val" [suggestions]="countrys" (completeMethod)="searchCountrys($event)" field="name"></p-autoComplete>
 </div>
